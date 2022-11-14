@@ -1,6 +1,8 @@
 #include "accelerator.h"
 #include <arduino.h>
 
+Measurement M;
+
 Accelerator::Accelerator()
 {
    Serial.println("Accelerator created!");
@@ -14,9 +16,12 @@ Accelerator::~Accelerator()
 
 void Accelerator::makeMeasurement()
 {
-  Measurement m = {analogRead(A0), analogRead(A1), analogRead(A2)};
+  M = {analogRead(A0), analogRead(A1), analogRead(A2)};
+  Serial.println(analogRead(A0));
+  Serial.println(analogRead(A1));
+  Serial.println(analogRead(A2));
 }
 Measurement Accelerator::getMeasurement()
 {
-  retur Measurement m;
+  return M;
 }
