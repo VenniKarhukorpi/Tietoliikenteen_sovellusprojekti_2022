@@ -30,7 +30,7 @@ randomCenterPoints = np.random.randint(200,450,size=(4,3))
 print(np.min(datahyi))
 print(np.max(datahyi))
 
-numberOfIterations = 50
+numberOfIterations = 20
 allCenterPoints = np.zeros((numberOfIterations,12))
 
 for k in range(numberOfIterations):
